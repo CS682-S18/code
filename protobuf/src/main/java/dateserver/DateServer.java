@@ -45,6 +45,7 @@ public class DateServer {
                             .setRequestNumber(++visitors)
                             .build();
                     response.writeDelimitedTo(outstream);
+                    sock.close();
                 }
 
             } catch(IOException ioe) {
