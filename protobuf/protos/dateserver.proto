@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+//from protobuf directory compile this as follows:
+//protoc -I=protos/ --java_out=src/main/java/ protos/dateserver.proto
+
 option java_package = "dateserver";
 option java_outer_classname = "DateServerMessages";
 
