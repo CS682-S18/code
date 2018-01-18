@@ -24,8 +24,10 @@ public class ZKDemo {
 
     //class instance running on mc01 port 2181
     //only accessible from machines behind the CS firewall!
-    public static final int PORT = 9000;
-    public static final String HOST = "localhost";
+    //use an ssh tunnel as necessary
+    //ssh -L <local_port>:mc01.cs.usfca.edu:2181 <username>@stargate.cs.usfca.edu
+    public static final int PORT = 2181;
+    public static final String HOST = "mc01";
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
