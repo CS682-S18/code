@@ -24,8 +24,8 @@ public class ZKDemo {
 
     //class instance running on mc01 port 2181
     //only accessible from machines behind the CS firewall!
-    public static final int PORT = 2181;
-    public static final String HOST = "mc01";
+    public static final int PORT = 9000;
+    public static final String HOST = "localhost";
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
@@ -35,7 +35,7 @@ public class ZKDemo {
 
         //Connect to ZK instance
         final CountDownLatch connectedSignal = new CountDownLatch(1);
-        ZooKeeper zk = new ZooKeeper(HOST, 1000, new Watcher() {
+        ZooKeeper zk = new ZooKeeper(HOST + ":" + PORT, 1000, new Watcher() {
                 @Override
                 public void process(WatchedEvent event) {
                     if (event.getState() == Watcher.Event.KeeperState.SyncConnected) {
@@ -43,6 +43,7 @@ public class ZKDemo {
                     }
                 }
             });
+        System.out.println("Connecting...");
         connectedSignal.await();
         System.out.println("Connected");
 
