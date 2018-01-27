@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+//from protobuf directory compile this as follows:
+//protoc -I=protos/ --java_out=src/main/java/ protos/dateserver.proto
+
+option java_package = "udppeer";
+option java_outer_classname = "UDPPeerMessages";
+
+message Type1 {
+    string strData = 1;
+}
+
+message Type2 {
+    int32 intData = 1;
+}
+
+message Packet {
+    oneof msg {
+        Type1 t1 = 1;
+        Type2 t2 = 2;
+    }
+}
