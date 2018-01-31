@@ -9,6 +9,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 import udppeer.UDPPeerMessages.Packet;
+import udppeer.UDPPeerMessages.Packet.Type;
 
 public class UDPReceiver {
 
@@ -28,10 +29,11 @@ public class UDPReceiver {
                 ByteArrayInputStream instream = new ByteArrayInputStream(rcvdData);
                 Packet protoPkt = Packet.parseDelimitedFrom(instream);
 
-                if(protoPkt.hasT1()) {
-                    System.out.println(protoPkt.getT1().getStrData());
-                } else if(protoPkt.hasT2()) {
-                    System.out.println(protoPkt.getT2().getIntData());
+                Type type = protoPkt.getType();
+                if(type == Type.TYPE1) {
+                    System.out.println(protoPkt.getStrData());
+                } else if(type == Type.TYPE2) {
+                    System.out.println(protoPkt.getIntData());
                 }
 
             } catch (IOException e) {

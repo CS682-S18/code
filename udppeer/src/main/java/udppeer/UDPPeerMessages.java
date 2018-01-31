@@ -14,1013 +14,33 @@ public final class UDPPeerMessages {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface Type1OrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Type1)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string strData = 1;</code>
-     */
-    java.lang.String getStrData();
-    /**
-     * <code>string strData = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getStrDataBytes();
-  }
-  /**
-   * Protobuf type {@code Type1}
-   */
-  public  static final class Type1 extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Type1)
-      Type1OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Type1.newBuilder() to construct.
-    private Type1(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Type1() {
-      strData_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Type1(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              strData_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return udppeer.UDPPeerMessages.internal_static_Type1_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return udppeer.UDPPeerMessages.internal_static_Type1_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              udppeer.UDPPeerMessages.Type1.class, udppeer.UDPPeerMessages.Type1.Builder.class);
-    }
-
-    public static final int STRDATA_FIELD_NUMBER = 1;
-    private volatile java.lang.Object strData_;
-    /**
-     * <code>string strData = 1;</code>
-     */
-    public java.lang.String getStrData() {
-      java.lang.Object ref = strData_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        strData_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string strData = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStrDataBytes() {
-      java.lang.Object ref = strData_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        strData_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getStrDataBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, strData_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getStrDataBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, strData_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof udppeer.UDPPeerMessages.Type1)) {
-        return super.equals(obj);
-      }
-      udppeer.UDPPeerMessages.Type1 other = (udppeer.UDPPeerMessages.Type1) obj;
-
-      boolean result = true;
-      result = result && getStrData()
-          .equals(other.getStrData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STRDATA_FIELD_NUMBER;
-      hash = (53 * hash) + getStrData().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static udppeer.UDPPeerMessages.Type1 parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(udppeer.UDPPeerMessages.Type1 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Type1}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Type1)
-        udppeer.UDPPeerMessages.Type1OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return udppeer.UDPPeerMessages.internal_static_Type1_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return udppeer.UDPPeerMessages.internal_static_Type1_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                udppeer.UDPPeerMessages.Type1.class, udppeer.UDPPeerMessages.Type1.Builder.class);
-      }
-
-      // Construct using udppeer.UDPPeerMessages.Type1.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        strData_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return udppeer.UDPPeerMessages.internal_static_Type1_descriptor;
-      }
-
-      public udppeer.UDPPeerMessages.Type1 getDefaultInstanceForType() {
-        return udppeer.UDPPeerMessages.Type1.getDefaultInstance();
-      }
-
-      public udppeer.UDPPeerMessages.Type1 build() {
-        udppeer.UDPPeerMessages.Type1 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public udppeer.UDPPeerMessages.Type1 buildPartial() {
-        udppeer.UDPPeerMessages.Type1 result = new udppeer.UDPPeerMessages.Type1(this);
-        result.strData_ = strData_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof udppeer.UDPPeerMessages.Type1) {
-          return mergeFrom((udppeer.UDPPeerMessages.Type1)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(udppeer.UDPPeerMessages.Type1 other) {
-        if (other == udppeer.UDPPeerMessages.Type1.getDefaultInstance()) return this;
-        if (!other.getStrData().isEmpty()) {
-          strData_ = other.strData_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        udppeer.UDPPeerMessages.Type1 parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (udppeer.UDPPeerMessages.Type1) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object strData_ = "";
-      /**
-       * <code>string strData = 1;</code>
-       */
-      public java.lang.String getStrData() {
-        java.lang.Object ref = strData_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          strData_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string strData = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getStrDataBytes() {
-        java.lang.Object ref = strData_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          strData_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string strData = 1;</code>
-       */
-      public Builder setStrData(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        strData_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string strData = 1;</code>
-       */
-      public Builder clearStrData() {
-        
-        strData_ = getDefaultInstance().getStrData();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string strData = 1;</code>
-       */
-      public Builder setStrDataBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        strData_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Type1)
-    }
-
-    // @@protoc_insertion_point(class_scope:Type1)
-    private static final udppeer.UDPPeerMessages.Type1 DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new udppeer.UDPPeerMessages.Type1();
-    }
-
-    public static udppeer.UDPPeerMessages.Type1 getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Type1>
-        PARSER = new com.google.protobuf.AbstractParser<Type1>() {
-      public Type1 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Type1(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Type1> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Type1> getParserForType() {
-      return PARSER;
-    }
-
-    public udppeer.UDPPeerMessages.Type1 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface Type2OrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Type2)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 intData = 1;</code>
-     */
-    int getIntData();
-  }
-  /**
-   * Protobuf type {@code Type2}
-   */
-  public  static final class Type2 extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Type2)
-      Type2OrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Type2.newBuilder() to construct.
-    private Type2(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Type2() {
-      intData_ = 0;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Type2(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-
-              intData_ = input.readInt32();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return udppeer.UDPPeerMessages.internal_static_Type2_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return udppeer.UDPPeerMessages.internal_static_Type2_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              udppeer.UDPPeerMessages.Type2.class, udppeer.UDPPeerMessages.Type2.Builder.class);
-    }
-
-    public static final int INTDATA_FIELD_NUMBER = 1;
-    private int intData_;
-    /**
-     * <code>int32 intData = 1;</code>
-     */
-    public int getIntData() {
-      return intData_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (intData_ != 0) {
-        output.writeInt32(1, intData_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (intData_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, intData_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof udppeer.UDPPeerMessages.Type2)) {
-        return super.equals(obj);
-      }
-      udppeer.UDPPeerMessages.Type2 other = (udppeer.UDPPeerMessages.Type2) obj;
-
-      boolean result = true;
-      result = result && (getIntData()
-          == other.getIntData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + INTDATA_FIELD_NUMBER;
-      hash = (53 * hash) + getIntData();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static udppeer.UDPPeerMessages.Type2 parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(udppeer.UDPPeerMessages.Type2 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Type2}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Type2)
-        udppeer.UDPPeerMessages.Type2OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return udppeer.UDPPeerMessages.internal_static_Type2_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return udppeer.UDPPeerMessages.internal_static_Type2_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                udppeer.UDPPeerMessages.Type2.class, udppeer.UDPPeerMessages.Type2.Builder.class);
-      }
-
-      // Construct using udppeer.UDPPeerMessages.Type2.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        intData_ = 0;
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return udppeer.UDPPeerMessages.internal_static_Type2_descriptor;
-      }
-
-      public udppeer.UDPPeerMessages.Type2 getDefaultInstanceForType() {
-        return udppeer.UDPPeerMessages.Type2.getDefaultInstance();
-      }
-
-      public udppeer.UDPPeerMessages.Type2 build() {
-        udppeer.UDPPeerMessages.Type2 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public udppeer.UDPPeerMessages.Type2 buildPartial() {
-        udppeer.UDPPeerMessages.Type2 result = new udppeer.UDPPeerMessages.Type2(this);
-        result.intData_ = intData_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof udppeer.UDPPeerMessages.Type2) {
-          return mergeFrom((udppeer.UDPPeerMessages.Type2)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(udppeer.UDPPeerMessages.Type2 other) {
-        if (other == udppeer.UDPPeerMessages.Type2.getDefaultInstance()) return this;
-        if (other.getIntData() != 0) {
-          setIntData(other.getIntData());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        udppeer.UDPPeerMessages.Type2 parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (udppeer.UDPPeerMessages.Type2) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int intData_ ;
-      /**
-       * <code>int32 intData = 1;</code>
-       */
-      public int getIntData() {
-        return intData_;
-      }
-      /**
-       * <code>int32 intData = 1;</code>
-       */
-      public Builder setIntData(int value) {
-        
-        intData_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 intData = 1;</code>
-       */
-      public Builder clearIntData() {
-        
-        intData_ = 0;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Type2)
-    }
-
-    // @@protoc_insertion_point(class_scope:Type2)
-    private static final udppeer.UDPPeerMessages.Type2 DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new udppeer.UDPPeerMessages.Type2();
-    }
-
-    public static udppeer.UDPPeerMessages.Type2 getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Type2>
-        PARSER = new com.google.protobuf.AbstractParser<Type2>() {
-      public Type2 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Type2(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Type2> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Type2> getParserForType() {
-      return PARSER;
-    }
-
-    public udppeer.UDPPeerMessages.Type2 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface PacketOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Packet)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Type1 t1 = 1;</code>
+     * <code>.Packet.Type type = 1;</code>
      */
-    boolean hasT1();
+    int getTypeValue();
     /**
-     * <code>.Type1 t1 = 1;</code>
+     * <code>.Packet.Type type = 1;</code>
      */
-    udppeer.UDPPeerMessages.Type1 getT1();
-    /**
-     * <code>.Type1 t1 = 1;</code>
-     */
-    udppeer.UDPPeerMessages.Type1OrBuilder getT1OrBuilder();
+    udppeer.UDPPeerMessages.Packet.Type getType();
 
     /**
-     * <code>.Type2 t2 = 2;</code>
+     * <code>string strData = 2;</code>
      */
-    boolean hasT2();
+    java.lang.String getStrData();
     /**
-     * <code>.Type2 t2 = 2;</code>
+     * <code>string strData = 2;</code>
      */
-    udppeer.UDPPeerMessages.Type2 getT2();
-    /**
-     * <code>.Type2 t2 = 2;</code>
-     */
-    udppeer.UDPPeerMessages.Type2OrBuilder getT2OrBuilder();
+    com.google.protobuf.ByteString
+        getStrDataBytes();
 
-    public udppeer.UDPPeerMessages.Packet.MsgCase getMsgCase();
+    /**
+     * <code>int32 intData = 3;</code>
+     */
+    int getIntData();
   }
   /**
    * Protobuf type {@code Packet}
@@ -1035,6 +55,9 @@ public final class UDPPeerMessages {
       super(builder);
     }
     private Packet() {
+      type_ = 0;
+      strData_ = "";
+      intData_ = 0;
     }
 
     @java.lang.Override
@@ -1068,32 +91,21 @@ public final class UDPPeerMessages {
               }
               break;
             }
-            case 10: {
-              udppeer.UDPPeerMessages.Type1.Builder subBuilder = null;
-              if (msgCase_ == 1) {
-                subBuilder = ((udppeer.UDPPeerMessages.Type1) msg_).toBuilder();
-              }
-              msg_ =
-                  input.readMessage(udppeer.UDPPeerMessages.Type1.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((udppeer.UDPPeerMessages.Type1) msg_);
-                msg_ = subBuilder.buildPartial();
-              }
-              msgCase_ = 1;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
               break;
             }
             case 18: {
-              udppeer.UDPPeerMessages.Type2.Builder subBuilder = null;
-              if (msgCase_ == 2) {
-                subBuilder = ((udppeer.UDPPeerMessages.Type2) msg_).toBuilder();
-              }
-              msg_ =
-                  input.readMessage(udppeer.UDPPeerMessages.Type2.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((udppeer.UDPPeerMessages.Type2) msg_);
-                msg_ = subBuilder.buildPartial();
-              }
-              msgCase_ = 2;
+              java.lang.String s = input.readStringRequireUtf8();
+
+              strData_ = s;
+              break;
+            }
+            case 24: {
+
+              intData_ = input.readInt32();
               break;
             }
           }
@@ -1120,94 +132,161 @@ public final class UDPPeerMessages {
               udppeer.UDPPeerMessages.Packet.class, udppeer.UDPPeerMessages.Packet.Builder.class);
     }
 
-    private int msgCase_ = 0;
-    private java.lang.Object msg_;
-    public enum MsgCase
-        implements com.google.protobuf.Internal.EnumLite {
-      T1(1),
-      T2(2),
-      MSG_NOT_SET(0);
-      private final int value;
-      private MsgCase(int value) {
-        this.value = value;
+    /**
+     * Protobuf enum {@code Packet.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>TYPE1 = 0;</code>
+       */
+      TYPE1(0),
+      /**
+       * <code>TYPE2 = 1;</code>
+       */
+      TYPE2(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>TYPE1 = 0;</code>
+       */
+      public static final int TYPE1_VALUE = 0;
+      /**
+       * <code>TYPE2 = 1;</code>
+       */
+      public static final int TYPE2_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
       }
+
       /**
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static MsgCase valueOf(int value) {
+      public static Type valueOf(int value) {
         return forNumber(value);
       }
 
-      public static MsgCase forNumber(int value) {
+      public static Type forNumber(int value) {
         switch (value) {
-          case 1: return T1;
-          case 2: return T2;
-          case 0: return MSG_NOT_SET;
+          case 0: return TYPE1;
+          case 1: return TYPE2;
           default: return null;
         }
       }
-      public int getNumber() {
-        return this.value;
-      }
-    };
 
-    public MsgCase
-    getMsgCase() {
-      return MsgCase.forNumber(
-          msgCase_);
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return udppeer.UDPPeerMessages.Packet.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:Packet.Type)
     }
 
-    public static final int T1_FIELD_NUMBER = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
     /**
-     * <code>.Type1 t1 = 1;</code>
+     * <code>.Packet.Type type = 1;</code>
      */
-    public boolean hasT1() {
-      return msgCase_ == 1;
+    public int getTypeValue() {
+      return type_;
     }
     /**
-     * <code>.Type1 t1 = 1;</code>
+     * <code>.Packet.Type type = 1;</code>
      */
-    public udppeer.UDPPeerMessages.Type1 getT1() {
-      if (msgCase_ == 1) {
-         return (udppeer.UDPPeerMessages.Type1) msg_;
-      }
-      return udppeer.UDPPeerMessages.Type1.getDefaultInstance();
-    }
-    /**
-     * <code>.Type1 t1 = 1;</code>
-     */
-    public udppeer.UDPPeerMessages.Type1OrBuilder getT1OrBuilder() {
-      if (msgCase_ == 1) {
-         return (udppeer.UDPPeerMessages.Type1) msg_;
-      }
-      return udppeer.UDPPeerMessages.Type1.getDefaultInstance();
+    public udppeer.UDPPeerMessages.Packet.Type getType() {
+      udppeer.UDPPeerMessages.Packet.Type result = udppeer.UDPPeerMessages.Packet.Type.valueOf(type_);
+      return result == null ? udppeer.UDPPeerMessages.Packet.Type.UNRECOGNIZED : result;
     }
 
-    public static final int T2_FIELD_NUMBER = 2;
+    public static final int STRDATA_FIELD_NUMBER = 2;
+    private volatile java.lang.Object strData_;
     /**
-     * <code>.Type2 t2 = 2;</code>
+     * <code>string strData = 2;</code>
      */
-    public boolean hasT2() {
-      return msgCase_ == 2;
+    public java.lang.String getStrData() {
+      java.lang.Object ref = strData_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        strData_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.Type2 t2 = 2;</code>
+     * <code>string strData = 2;</code>
      */
-    public udppeer.UDPPeerMessages.Type2 getT2() {
-      if (msgCase_ == 2) {
-         return (udppeer.UDPPeerMessages.Type2) msg_;
+    public com.google.protobuf.ByteString
+        getStrDataBytes() {
+      java.lang.Object ref = strData_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        strData_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return udppeer.UDPPeerMessages.Type2.getDefaultInstance();
     }
+
+    public static final int INTDATA_FIELD_NUMBER = 3;
+    private int intData_;
     /**
-     * <code>.Type2 t2 = 2;</code>
+     * <code>int32 intData = 3;</code>
      */
-    public udppeer.UDPPeerMessages.Type2OrBuilder getT2OrBuilder() {
-      if (msgCase_ == 2) {
-         return (udppeer.UDPPeerMessages.Type2) msg_;
-      }
-      return udppeer.UDPPeerMessages.Type2.getDefaultInstance();
+    public int getIntData() {
+      return intData_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1222,11 +301,14 @@ public final class UDPPeerMessages {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (msgCase_ == 1) {
-        output.writeMessage(1, (udppeer.UDPPeerMessages.Type1) msg_);
+      if (type_ != udppeer.UDPPeerMessages.Packet.Type.TYPE1.getNumber()) {
+        output.writeEnum(1, type_);
       }
-      if (msgCase_ == 2) {
-        output.writeMessage(2, (udppeer.UDPPeerMessages.Type2) msg_);
+      if (!getStrDataBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, strData_);
+      }
+      if (intData_ != 0) {
+        output.writeInt32(3, intData_);
       }
       unknownFields.writeTo(output);
     }
@@ -1236,13 +318,16 @@ public final class UDPPeerMessages {
       if (size != -1) return size;
 
       size = 0;
-      if (msgCase_ == 1) {
+      if (type_ != udppeer.UDPPeerMessages.Packet.Type.TYPE1.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (udppeer.UDPPeerMessages.Type1) msg_);
+          .computeEnumSize(1, type_);
       }
-      if (msgCase_ == 2) {
+      if (!getStrDataBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, strData_);
+      }
+      if (intData_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (udppeer.UDPPeerMessages.Type2) msg_);
+          .computeInt32Size(3, intData_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1260,21 +345,11 @@ public final class UDPPeerMessages {
       udppeer.UDPPeerMessages.Packet other = (udppeer.UDPPeerMessages.Packet) obj;
 
       boolean result = true;
-      result = result && getMsgCase().equals(
-          other.getMsgCase());
-      if (!result) return false;
-      switch (msgCase_) {
-        case 1:
-          result = result && getT1()
-              .equals(other.getT1());
-          break;
-        case 2:
-          result = result && getT2()
-              .equals(other.getT2());
-          break;
-        case 0:
-        default:
-      }
+      result = result && type_ == other.type_;
+      result = result && getStrData()
+          .equals(other.getStrData());
+      result = result && (getIntData()
+          == other.getIntData());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1286,18 +361,12 @@ public final class UDPPeerMessages {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      switch (msgCase_) {
-        case 1:
-          hash = (37 * hash) + T1_FIELD_NUMBER;
-          hash = (53 * hash) + getT1().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + T2_FIELD_NUMBER;
-          hash = (53 * hash) + getT2().hashCode();
-          break;
-        case 0:
-        default:
-      }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + STRDATA_FIELD_NUMBER;
+      hash = (53 * hash) + getStrData().hashCode();
+      hash = (37 * hash) + INTDATA_FIELD_NUMBER;
+      hash = (53 * hash) + getIntData();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1427,8 +496,12 @@ public final class UDPPeerMessages {
       }
       public Builder clear() {
         super.clear();
-        msgCase_ = 0;
-        msg_ = null;
+        type_ = 0;
+
+        strData_ = "";
+
+        intData_ = 0;
+
         return this;
       }
 
@@ -1451,21 +524,9 @@ public final class UDPPeerMessages {
 
       public udppeer.UDPPeerMessages.Packet buildPartial() {
         udppeer.UDPPeerMessages.Packet result = new udppeer.UDPPeerMessages.Packet(this);
-        if (msgCase_ == 1) {
-          if (t1Builder_ == null) {
-            result.msg_ = msg_;
-          } else {
-            result.msg_ = t1Builder_.build();
-          }
-        }
-        if (msgCase_ == 2) {
-          if (t2Builder_ == null) {
-            result.msg_ = msg_;
-          } else {
-            result.msg_ = t2Builder_.build();
-          }
-        }
-        result.msgCase_ = msgCase_;
+        result.type_ = type_;
+        result.strData_ = strData_;
+        result.intData_ = intData_;
         onBuilt();
         return result;
       }
@@ -1507,18 +568,15 @@ public final class UDPPeerMessages {
 
       public Builder mergeFrom(udppeer.UDPPeerMessages.Packet other) {
         if (other == udppeer.UDPPeerMessages.Packet.getDefaultInstance()) return this;
-        switch (other.getMsgCase()) {
-          case T1: {
-            mergeT1(other.getT1());
-            break;
-          }
-          case T2: {
-            mergeT2(other.getT2());
-            break;
-          }
-          case MSG_NOT_SET: {
-            break;
-          }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (!other.getStrData().isEmpty()) {
+          strData_ = other.strData_;
+          onChanged();
+        }
+        if (other.getIntData() != 0) {
+          setIntData(other.getIntData());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1546,292 +604,144 @@ public final class UDPPeerMessages {
         }
         return this;
       }
-      private int msgCase_ = 0;
-      private java.lang.Object msg_;
-      public MsgCase
-          getMsgCase() {
-        return MsgCase.forNumber(
-            msgCase_);
-      }
 
-      public Builder clearMsg() {
-        msgCase_ = 0;
-        msg_ = null;
+      private int type_ = 0;
+      /**
+       * <code>.Packet.Type type = 1;</code>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.Packet.Type type = 1;</code>
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Packet.Type type = 1;</code>
+       */
+      public udppeer.UDPPeerMessages.Packet.Type getType() {
+        udppeer.UDPPeerMessages.Packet.Type result = udppeer.UDPPeerMessages.Packet.Type.valueOf(type_);
+        return result == null ? udppeer.UDPPeerMessages.Packet.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.Packet.Type type = 1;</code>
+       */
+      public Builder setType(udppeer.UDPPeerMessages.Packet.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.Packet.Type type = 1;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
         onChanged();
         return this;
       }
 
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          udppeer.UDPPeerMessages.Type1, udppeer.UDPPeerMessages.Type1.Builder, udppeer.UDPPeerMessages.Type1OrBuilder> t1Builder_;
+      private java.lang.Object strData_ = "";
       /**
-       * <code>.Type1 t1 = 1;</code>
+       * <code>string strData = 2;</code>
        */
-      public boolean hasT1() {
-        return msgCase_ == 1;
-      }
-      /**
-       * <code>.Type1 t1 = 1;</code>
-       */
-      public udppeer.UDPPeerMessages.Type1 getT1() {
-        if (t1Builder_ == null) {
-          if (msgCase_ == 1) {
-            return (udppeer.UDPPeerMessages.Type1) msg_;
-          }
-          return udppeer.UDPPeerMessages.Type1.getDefaultInstance();
+      public java.lang.String getStrData() {
+        java.lang.Object ref = strData_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          strData_ = s;
+          return s;
         } else {
-          if (msgCase_ == 1) {
-            return t1Builder_.getMessage();
-          }
-          return udppeer.UDPPeerMessages.Type1.getDefaultInstance();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.Type1 t1 = 1;</code>
+       * <code>string strData = 2;</code>
        */
-      public Builder setT1(udppeer.UDPPeerMessages.Type1 value) {
-        if (t1Builder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          msg_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getStrDataBytes() {
+        java.lang.Object ref = strData_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          strData_ = b;
+          return b;
         } else {
-          t1Builder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-        msgCase_ = 1;
+      }
+      /**
+       * <code>string strData = 2;</code>
+       */
+      public Builder setStrData(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        strData_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>.Type1 t1 = 1;</code>
+       * <code>string strData = 2;</code>
        */
-      public Builder setT1(
-          udppeer.UDPPeerMessages.Type1.Builder builderForValue) {
-        if (t1Builder_ == null) {
-          msg_ = builderForValue.build();
-          onChanged();
-        } else {
-          t1Builder_.setMessage(builderForValue.build());
-        }
-        msgCase_ = 1;
+      public Builder clearStrData() {
+        
+        strData_ = getDefaultInstance().getStrData();
+        onChanged();
         return this;
       }
       /**
-       * <code>.Type1 t1 = 1;</code>
+       * <code>string strData = 2;</code>
        */
-      public Builder mergeT1(udppeer.UDPPeerMessages.Type1 value) {
-        if (t1Builder_ == null) {
-          if (msgCase_ == 1 &&
-              msg_ != udppeer.UDPPeerMessages.Type1.getDefaultInstance()) {
-            msg_ = udppeer.UDPPeerMessages.Type1.newBuilder((udppeer.UDPPeerMessages.Type1) msg_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            msg_ = value;
-          }
-          onChanged();
-        } else {
-          if (msgCase_ == 1) {
-            t1Builder_.mergeFrom(value);
-          }
-          t1Builder_.setMessage(value);
-        }
-        msgCase_ = 1;
+      public Builder setStrDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        strData_ = value;
+        onChanged();
         return this;
-      }
-      /**
-       * <code>.Type1 t1 = 1;</code>
-       */
-      public Builder clearT1() {
-        if (t1Builder_ == null) {
-          if (msgCase_ == 1) {
-            msgCase_ = 0;
-            msg_ = null;
-            onChanged();
-          }
-        } else {
-          if (msgCase_ == 1) {
-            msgCase_ = 0;
-            msg_ = null;
-          }
-          t1Builder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.Type1 t1 = 1;</code>
-       */
-      public udppeer.UDPPeerMessages.Type1.Builder getT1Builder() {
-        return getT1FieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.Type1 t1 = 1;</code>
-       */
-      public udppeer.UDPPeerMessages.Type1OrBuilder getT1OrBuilder() {
-        if ((msgCase_ == 1) && (t1Builder_ != null)) {
-          return t1Builder_.getMessageOrBuilder();
-        } else {
-          if (msgCase_ == 1) {
-            return (udppeer.UDPPeerMessages.Type1) msg_;
-          }
-          return udppeer.UDPPeerMessages.Type1.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.Type1 t1 = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          udppeer.UDPPeerMessages.Type1, udppeer.UDPPeerMessages.Type1.Builder, udppeer.UDPPeerMessages.Type1OrBuilder> 
-          getT1FieldBuilder() {
-        if (t1Builder_ == null) {
-          if (!(msgCase_ == 1)) {
-            msg_ = udppeer.UDPPeerMessages.Type1.getDefaultInstance();
-          }
-          t1Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              udppeer.UDPPeerMessages.Type1, udppeer.UDPPeerMessages.Type1.Builder, udppeer.UDPPeerMessages.Type1OrBuilder>(
-                  (udppeer.UDPPeerMessages.Type1) msg_,
-                  getParentForChildren(),
-                  isClean());
-          msg_ = null;
-        }
-        msgCase_ = 1;
-        onChanged();;
-        return t1Builder_;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          udppeer.UDPPeerMessages.Type2, udppeer.UDPPeerMessages.Type2.Builder, udppeer.UDPPeerMessages.Type2OrBuilder> t2Builder_;
+      private int intData_ ;
       /**
-       * <code>.Type2 t2 = 2;</code>
+       * <code>int32 intData = 3;</code>
        */
-      public boolean hasT2() {
-        return msgCase_ == 2;
+      public int getIntData() {
+        return intData_;
       }
       /**
-       * <code>.Type2 t2 = 2;</code>
+       * <code>int32 intData = 3;</code>
        */
-      public udppeer.UDPPeerMessages.Type2 getT2() {
-        if (t2Builder_ == null) {
-          if (msgCase_ == 2) {
-            return (udppeer.UDPPeerMessages.Type2) msg_;
-          }
-          return udppeer.UDPPeerMessages.Type2.getDefaultInstance();
-        } else {
-          if (msgCase_ == 2) {
-            return t2Builder_.getMessage();
-          }
-          return udppeer.UDPPeerMessages.Type2.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.Type2 t2 = 2;</code>
-       */
-      public Builder setT2(udppeer.UDPPeerMessages.Type2 value) {
-        if (t2Builder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          msg_ = value;
-          onChanged();
-        } else {
-          t2Builder_.setMessage(value);
-        }
-        msgCase_ = 2;
+      public Builder setIntData(int value) {
+        
+        intData_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>.Type2 t2 = 2;</code>
+       * <code>int32 intData = 3;</code>
        */
-      public Builder setT2(
-          udppeer.UDPPeerMessages.Type2.Builder builderForValue) {
-        if (t2Builder_ == null) {
-          msg_ = builderForValue.build();
-          onChanged();
-        } else {
-          t2Builder_.setMessage(builderForValue.build());
-        }
-        msgCase_ = 2;
+      public Builder clearIntData() {
+        
+        intData_ = 0;
+        onChanged();
         return this;
-      }
-      /**
-       * <code>.Type2 t2 = 2;</code>
-       */
-      public Builder mergeT2(udppeer.UDPPeerMessages.Type2 value) {
-        if (t2Builder_ == null) {
-          if (msgCase_ == 2 &&
-              msg_ != udppeer.UDPPeerMessages.Type2.getDefaultInstance()) {
-            msg_ = udppeer.UDPPeerMessages.Type2.newBuilder((udppeer.UDPPeerMessages.Type2) msg_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            msg_ = value;
-          }
-          onChanged();
-        } else {
-          if (msgCase_ == 2) {
-            t2Builder_.mergeFrom(value);
-          }
-          t2Builder_.setMessage(value);
-        }
-        msgCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.Type2 t2 = 2;</code>
-       */
-      public Builder clearT2() {
-        if (t2Builder_ == null) {
-          if (msgCase_ == 2) {
-            msgCase_ = 0;
-            msg_ = null;
-            onChanged();
-          }
-        } else {
-          if (msgCase_ == 2) {
-            msgCase_ = 0;
-            msg_ = null;
-          }
-          t2Builder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.Type2 t2 = 2;</code>
-       */
-      public udppeer.UDPPeerMessages.Type2.Builder getT2Builder() {
-        return getT2FieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.Type2 t2 = 2;</code>
-       */
-      public udppeer.UDPPeerMessages.Type2OrBuilder getT2OrBuilder() {
-        if ((msgCase_ == 2) && (t2Builder_ != null)) {
-          return t2Builder_.getMessageOrBuilder();
-        } else {
-          if (msgCase_ == 2) {
-            return (udppeer.UDPPeerMessages.Type2) msg_;
-          }
-          return udppeer.UDPPeerMessages.Type2.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.Type2 t2 = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          udppeer.UDPPeerMessages.Type2, udppeer.UDPPeerMessages.Type2.Builder, udppeer.UDPPeerMessages.Type2OrBuilder> 
-          getT2FieldBuilder() {
-        if (t2Builder_ == null) {
-          if (!(msgCase_ == 2)) {
-            msg_ = udppeer.UDPPeerMessages.Type2.getDefaultInstance();
-          }
-          t2Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              udppeer.UDPPeerMessages.Type2, udppeer.UDPPeerMessages.Type2.Builder, udppeer.UDPPeerMessages.Type2OrBuilder>(
-                  (udppeer.UDPPeerMessages.Type2) msg_,
-                  getParentForChildren(),
-                  isClean());
-          msg_ = null;
-        }
-        msgCase_ = 2;
-        onChanged();;
-        return t2Builder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1883,16 +793,6 @@ public final class UDPPeerMessages {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Type1_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Type1_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Type2_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Type2_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Packet_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1906,11 +806,10 @@ public final class UDPPeerMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rudppeer.proto\"\030\n\005Type1\022\017\n\007strData\030\001 \001(" +
-      "\t\"\030\n\005Type2\022\017\n\007intData\030\001 \001(\005\";\n\006Packet\022\024\n" +
-      "\002t1\030\001 \001(\0132\006.Type1H\000\022\024\n\002t2\030\002 \001(\0132\006.Type2H" +
-      "\000B\005\n\003msgB\032\n\007udppeerB\017UDPPeerMessagesb\006pr" +
-      "oto3"
+      "\n\rudppeer.proto\"d\n\006Packet\022\032\n\004type\030\001 \001(\0162" +
+      "\014.Packet.Type\022\017\n\007strData\030\002 \001(\t\022\017\n\007intDat" +
+      "a\030\003 \001(\005\"\034\n\004Type\022\t\n\005TYPE1\020\000\022\t\n\005TYPE2\020\001B\032\n" +
+      "\007udppeerB\017UDPPeerMessagesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1924,24 +823,12 @@ public final class UDPPeerMessages {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_Type1_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_Type1_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Type1_descriptor,
-        new java.lang.String[] { "StrData", });
-    internal_static_Type2_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_Type2_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Type2_descriptor,
-        new java.lang.String[] { "IntData", });
     internal_static_Packet_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_Packet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Packet_descriptor,
-        new java.lang.String[] { "T1", "T2", "Msg", });
+        new java.lang.String[] { "Type", "StrData", "IntData", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
