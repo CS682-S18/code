@@ -6,6 +6,17 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class EvenListener implements NumberListener, Runnable {
 
+/**
+    WARNING! This implementation is incorrect.
+    It is possible that numbers will be lost if two events
+    happen before the main processing in the run loop runs.
+    Exercise 1 is to fix this problem!
+    Exercise 2 is to modify this code to keep track of how 
+    many times the listener waits for more than two seconds
+    between even numbers.
+**/
+    
+    
     private static final int MAX_COUNT = 5;
     private String name;
     private int evensCount;
